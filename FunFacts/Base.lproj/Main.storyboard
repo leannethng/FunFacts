@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FunFacts" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +18,108 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u1z-i6-Bc0">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="DXq-eO-uny"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="Show another fun fact"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="DXq-eO-uny"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="DXq-eO-uny"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="showFunFact" destination="BYZ-38-t0r" eventType="touchUpInside" id="VWJ-h0-xBw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abR-cu-7VR">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <string key="text">On average, it takes 66 days to form a new habit.", "Mammoths still walked the Earth when the Great Pyramid was being built. On average, it takes 66 days to form a new habit.", "Mammoths still walked the Earth when the Great Pyramid was being built.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="40" y="321" width="520" height="159"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did you know?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zp2-WB-004">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.56874999999999998" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.65036057692307692" blue="0.65036057692307692" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="zp2-WB-004" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="1KE-7h-JoX"/>
+                            <constraint firstItem="abR-cu-7VR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="8Gh-hE-cnD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="abR-cu-7VR" secondAttribute="trailing" constant="20" id="A4I-b3-HVV"/>
+                            <constraint firstItem="abR-cu-7VR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Cob-P7-S3N"/>
+                            <constraint firstItem="u1z-i6-Bc0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="DSX-ql-Hag"/>
+                            <constraint firstItem="zp2-WB-004" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="181" id="Ehf-nm-xSd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="u1z-i6-Bc0" secondAttribute="bottom" constant="80" id="epy-Rs-qLW"/>
+                            <constraint firstItem="abR-cu-7VR" firstAttribute="top" secondItem="zp2-WB-004" secondAttribute="bottom" constant="178" id="gb2-4M-yrW">
+                                <variation key="heightClass=regular" constant="120"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="u1z-i6-Bc0" secondAttribute="trailing" constant="20" id="jPd-eh-6vE"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="u1z-i6-Bc0"/>
+                                <exclude reference="abR-cu-7VR"/>
+                                <exclude reference="zp2-WB-004"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="1KE-7h-JoX"/>
+                                <exclude reference="Ehf-nm-xSd"/>
+                                <exclude reference="8Gh-hE-cnD"/>
+                                <exclude reference="A4I-b3-HVV"/>
+                                <exclude reference="Cob-P7-S3N"/>
+                                <exclude reference="gb2-4M-yrW"/>
+                                <exclude reference="DSX-ql-Hag"/>
+                                <exclude reference="jPd-eh-6vE"/>
+                                <exclude reference="epy-Rs-qLW"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="u1z-i6-Bc0"/>
+                                <include reference="abR-cu-7VR"/>
+                                <include reference="zp2-WB-004"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="1KE-7h-JoX"/>
+                                <include reference="Ehf-nm-xSd"/>
+                                <include reference="8Gh-hE-cnD"/>
+                                <include reference="A4I-b3-HVV"/>
+                                <include reference="Cob-P7-S3N"/>
+                                <exclude reference="gb2-4M-yrW"/>
+                                <include reference="DSX-ql-Hag"/>
+                                <include reference="jPd-eh-6vE"/>
+                                <include reference="epy-Rs-qLW"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="funFactButton" destination="u1z-i6-Bc0" id="PUY-b6-8nw"/>
+                        <outlet property="funFactLabel" destination="abR-cu-7VR" id="WhO-G6-rcB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="258" y="478.5"/>
         </scene>
     </scenes>
 </document>

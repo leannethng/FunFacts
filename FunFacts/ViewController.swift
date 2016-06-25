@@ -8,11 +8,21 @@
 
 import UIKit
 
-class ViewController: UIViewController {
 
+class ViewController: UIViewController {
+    
+    @IBOutlet weak var funFactLabel: UILabel!
+    
+    @IBOutlet weak var funFactButton: UIButton!
+    
+    //Loading the FactModel struct from FactModel.swift
+    let factModel = FactModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        funFactLabel.text = factModel.getRandomFact()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +30,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func showFunFact() {
+        let randomColor = ColorModel().getRandomColor()
+         funFactButton.tintColor = randomColor
+        
+        view.backgroundColor = randomColor
+       
+        funFactLabel.text = factModel.getRandomFact()
+    }
 
 }
 
