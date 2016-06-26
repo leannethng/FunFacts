@@ -26,7 +26,7 @@
 		D53BF3731D1B704900E5D2A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D53BF3751D1B704900E5D2A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5415BD61D1F39D1000C7C6F /* ColorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorModel.swift; sourceTree = "<group>"; };
-		D5415BD81D1F4663000C7C6F /* FunFacts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FunFacts; sourceTree = "<group>"; };
+		D5415BD81D1F4663000C7C6F /* FunFacts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FunFacts; sourceTree = "<group>"; };
 		D5819FD51D1F189200F3DA58 /* FactModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
